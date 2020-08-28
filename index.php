@@ -4,6 +4,18 @@ require_once(__DIR__ . '/Stanza.php');
 
 // Array delle stanze == $rooms
 // var_dump($rooms);
+echo "<h1>Stanze Hotel</h1>";
+echo '<h2>metodo di return array</h2>';
+foreach ($rooms as $room) {
+  $singola_stanza = new Stanza($room['id'], $room['floor'], $room['room_number'], $room['beds']);
+  $test = $singola_stanza->getStanzaData();
+  echo '<ul>';
+  echo '<li> ID: ' . $test['id'] . '</li>';
+  echo '<li> FLOOR: ' . $test['floor'] . '</li>';
+  echo '<li> ROOM NUMBER: ' . $test['roomNumber'] . '</li>';
+  echo '<li> BEDS: ' . $test['beds'] . '</li>';
+  echo '</ul>';
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +25,7 @@ require_once(__DIR__ . '/Stanza.php');
     <title></title>
   </head>
   <body>
-    <h2>Stanze del hotel:</h2>
+    <h2>Metodo "standard" con il get:</h2>
     <?php foreach ($rooms as $room) { ?>
       <ul>
         <?php $one_room = new Stanza($room['id'], $room['floor'], $room['room_number'], $room['beds']) ?>

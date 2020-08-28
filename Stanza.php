@@ -26,6 +26,16 @@ class Stanza {
   public function getRoomBeds() {
     return $this->beds;
   }
+
+  // Metodo di ritorno dell'array
+  public function getStanzaData() {
+    return [
+      'id' => $this->id,
+      'floor' => $this->floor,
+      'roomNumber' => $this->roomNumber,
+      'beds' => $this->beds,
+    ];
+  }
 }
 
 ?>

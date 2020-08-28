@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/database.php';
-require_once(__DIR__ . '/Stanze.php');
+require_once(__DIR__ . '/Stanza.php');
 
 // Array delle stanze == $rooms
 // var_dump($rooms);
@@ -16,7 +16,7 @@ require_once(__DIR__ . '/Stanze.php');
     <h2>Stanze del hotel:</h2>
     <?php foreach ($rooms as $room) { ?>
       <ul>
-        <?php $one_room = new Stanze($room['id'], $room['floor'], $room['room_number'], $room['beds']) ?>
+        <?php $one_room = new Stanza($room['id'], $room['floor'], $room['room_number'], $room['beds']) ?>
         <li>Id stanza: <?php echo $one_room->getRoomId(); ?> </li>
         <li>Piano: <?php echo $one_room->getRoomFloor(); ?> </li>
         <li>Nomero Stanza: <?php echo $one_room->getRoomNumber(); ?> </li>

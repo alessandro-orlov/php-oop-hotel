@@ -1,6 +1,6 @@
 <?php
 
-class Stanze {
+class Stanza {
   public $id;
   public $floor;
   public $roomNumber;

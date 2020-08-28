@@ -13,6 +13,7 @@ require_once(__DIR__ . '/Stanze.php');
     <title></title>
   </head>
   <body>
+    <h2>Stanze del hotel:</h2>
     <?php foreach ($rooms as $room) { ?>
       <ul>
         <?php $one_room = new Stanze($room['id'], $room['floor'], $room['room_number'], $room['beds']) ?>

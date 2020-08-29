@@ -26,13 +26,17 @@ foreach ($rooms as $room) {
   </head>
   <body>
     <h2>Metodo "standard" con il get:</h2>
-    <?php foreach ($rooms as $room) { ?>
+    <!-- Stampa le info dal database VERO -->
+    <?php foreach ($stanzeHotel as $room) { ?>
       <ul>
         <?php $one_room = new Stanza($room['id'], $room['floor'], $room['room_number'], $room['beds']) ?>
+        <?php $one_room->type = $room['type'] ?>
+        
         <li>Id stanza: <?php echo $one_room->getRoomId(); ?> </li>
         <li>Piano: <?php echo $one_room->getRoomFloor(); ?> </li>
         <li>Nomero Stanza: <?php echo $one_room->getRoomNumber(); ?> </li>
         <li>Letti: <?php echo $one_room->getRoomBeds(); ?> </li>
+        <li>Tipo: <?php echo $one_room->getRoomType(); ?> </li>
       </ul>
     <?php } ?>
   </body>

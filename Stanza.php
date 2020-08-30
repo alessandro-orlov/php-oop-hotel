@@ -1,7 +1,7 @@
 <?php
 
 class Stanza {
-  public $id;
+  private $id;
   public $floor;
   public $roomNumber;
   public $beds;
@@ -26,7 +26,6 @@ class Stanza {
   public function getRoomBeds() {
     return $this->beds;
   }
-
   public function getRoomType() {
     return $this->type;
   }

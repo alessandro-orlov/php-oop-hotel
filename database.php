@@ -110,4 +110,8 @@
     ]
   ];
 
+  usort($stanzeHotel, function($a, $b) {
+    return $a[strlen(['type'])] - $b[strlen(['type'])] ;
+  });
+
  ?>

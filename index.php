@@ -16,6 +16,8 @@ foreach ($rooms as $room) {
   echo '<li> BEDS: ' . $test['beds'] . '</li>';
   echo '</ul>';
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +34,7 @@ foreach ($rooms as $room) {
         <?php $one_room = new Stanza($room['id'], $room['floor'], $room['room_number'], $room['beds']) ?>
         <?php $one_room->type = $room['type'] ?>
         
+
         <li>Id stanza: <?php echo $one_room->getRoomId(); ?> </li>
         <li>Piano: <?php echo $one_room->getRoomFloor(); ?> </li>
         <li>Nomero Stanza: <?php echo $one_room->getRoomNumber(); ?> </li>
